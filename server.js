@@ -1,18 +1,8 @@
-
-//Install express server
 const express = require('express');
-const http = require('http');
-const path = require('path');
 const app = express();
-const port = process.env.PORT || 4200; //  listening on the default Heroku port
-const server = http.createServer(app);
-// Serve only the static files form the dist directory
-
-app.use(express.static(path.join(__dirname, '/dist')));
-///Start the app by
-app.all('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '/dist/index.html'));
+const path = require('path');
+app.use(express.static('./dist/angular-tour-of-heros'));
+app.get('/*', function(req, res) {
+  res.sendFile(path.join('./dist/angular-tour-of-heros/index.html'));
 });
-
-app.set('port', port);
-server.listen(port, () => console.log('Running...'));
+app.listen(process.env.PORT || 8080);
