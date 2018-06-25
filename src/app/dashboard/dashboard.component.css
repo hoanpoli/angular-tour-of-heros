@@ -1,8 +1,10 @@
 /* DashboardComponent's private CSS styles */
 [class*='col-'] {
     float: left;
+    padding-left: 40px;
     padding-right: 50px;
     padding-bottom: 50px;
+    align-content: center;
   }
   [class*='col-']:last-of-type {
     padding-right: 20px;

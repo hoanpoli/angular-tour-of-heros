@@ -1,4 +1,11 @@
 /* HeroDetailComponent's private CSS styles */
+
+h2{
+  padding-left: 50px;
+}
+.pd50{
+  padding-left: 50px;
+}
 label {
     display: inline-block;
     width: 3em;
